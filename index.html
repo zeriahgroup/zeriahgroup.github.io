@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zeriah Group</title>
+  <meta name="description" content="Zeriah Group — Labs · Studios · Group">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0b0f14;
+      color: #e8eef6;
+      text-align: center;
+    }
+    header {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+    p {
+      color: #9fb1c5;
+    }
+    .links {
+      margin-top: 1.5rem;
+    }
+    a {
+      display: inline-block;
+      margin: .5rem;
+      padding: .75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      background: #0ea5e9;
+      color: #fff;
+      font-weight: 600;
+    }
+    a.secondary {
+      background: #22c55e;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: .9rem;
+      color: #9fb1c5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zeriah Group</h1>
+    <p>Building helpful, playful products.</p>
+    <div class="links">
+      <a href="https://zeriahgroup.com" target="_blank">ZeriahGroup.com</a>
+      <a href="https://zeriahlabs.com" target="_blank" class="secondary">Zeriah Labs</a>
+      <a href="https://zeriahstudios.com" target="_blank" class="secondary">Zeriah Studios</a>
+    </div>
+  </header>
+  <footer>
+    © <span id="y"></span> Zeriah Group
+  </footer>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
