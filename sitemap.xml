@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://zeriahgroup.com/</loc><lastmod>2025-09-15</lastmod><priority>1.00</priority></url>
+  <url><loc>https://zeriahgroup.com/about.html</loc><lastmod>2025-09-15</lastmod><priority>0.80</priority></url>
+  <url><loc>https://zeriahgroup.com/brands.html</loc><lastmod>2025-09-15</lastmod><priority>0.80</priority></url>
+  <url><loc>https://zeriahgroup.com/newsroom.html</loc><lastmod>2025-09-15</lastmod><priority>0.80</priority></url>
+  <url><loc>https://zeriahgroup.com/careers.html</loc><lastmod>2025-09-15</lastmod><priority>0.64</priority></url>
+  <url><loc>https://zeriahgroup.com/contact.html</loc><lastmod>2025-09-15</lastmod><priority>0.64</priority></url>
+
+  <!-- Individual news posts -->
+  <url><loc>https://zeriahgroup.com/newsroom/2025-09-01-zeriah-labs-app-alpha.html</loc><lastmod>2025-09-15</lastmod><priority>0.64</priority></url>
+  <url><loc>https://zeriahgroup.com/newsroom/2025-08-12-brand-update.html</loc><lastmod>2025-09-15</lastmod><priority>0.64</priority></url>
+</urlset>
