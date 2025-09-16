@@ -14,23 +14,15 @@
     .ring-card{transition: box-shadow .2s, transform .2s}
     .ring-card:hover{box-shadow:0 8px 30px rgba(15,23,42,.08); transform:translateY(-1px)}
   </style>
-
-  <!-- ⚠️ Set these once after deploying your R2 public buckets -->
-  <script>
-    window.R2_BASE_GROUP   = "https://R2_BASE_GROUP/zeriahgroup-assets";
-    window.R2_BASE_LABS    = "https://R2_BASE_LABS/zeriahlabs-assets";
-    window.R2_BASE_STUDIOS = "https://R2_BASE_STUDIOS/zeriahstudios-assets";
-  </script>
 </head>
 <body class="bg-white text-slate-900">
   <!-- Top bar -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="/" class="flex items-center gap-3">
-        <!-- Group wordmark from R2 with PNG fallback -->
         <picture>
-          <source id="navLogoWebp" type="image/webp">
-          <img id="navLogoPng" alt="Zeriah Group" class="h-8 w-auto" decoding="async" fetchpriority="high">
+          <source srcset="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.webp" type="image/webp">
+          <img src="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.png" alt="Zeriah Group" class="h-8 w-auto" decoding="async" fetchpriority="high">
         </picture>
       </a>
 
@@ -80,10 +72,9 @@
         </div>
       </div>
       <div class="relative">
-        <!-- Large hero wordmark -->
         <picture>
-          <source id="heroLogoWebp" type="image/webp">
-          <img id="heroLogoPng" alt="Zeriah Group wordmark" class="rounded-2xl shadow-lg w-full object-contain h-72 lg:h-full bg-white p-8" loading="eager" decoding="async">
+          <source srcset="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.webp" type="image/webp">
+          <img src="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.png" alt="Zeriah Group wordmark" class="rounded-2xl shadow-lg w-full object-contain h-72 lg:h-full bg-white p-8" loading="eager" decoding="async">
         </picture>
       </div>
     </div>
@@ -105,8 +96,8 @@
       <!-- Labs -->
       <a href="/brands.html#labs" class="group ring-card rounded-2xl border border-slate-200 p-6 flex items-center gap-6">
         <picture class="shrink-0 w-28">
-          <source id="labsLogoWebp" type="image/webp">
-          <img id="labsLogoPng" alt="Zeriah Labs" class="w-28 h-auto" loading="lazy" decoding="async">
+          <source srcset="https://assets.zeriahlabs.com/Zeriah_Labs_Vertical_Final.webp" type="image/webp">
+          <img src="https://assets.zeriahlabs.com/Zeriah_Labs_Vertical_Final.png" alt="Zeriah Labs" class="w-28 h-auto" loading="lazy" decoding="async">
         </picture>
         <div>
           <h3 class="font-semibold text-lg">Zeriah Labs</h3>
@@ -117,8 +108,8 @@
       <!-- Studios -->
       <a href="/brands.html#studios" class="group ring-card rounded-2xl border border-slate-200 p-6 flex items-center gap-6">
         <picture class="shrink-0 w-28">
-          <source id="studiosLogoWebp" type="image/webp">
-          <img id="studiosLogoPng" alt="Zeriah Studios" class="w-28 h-auto" loading="lazy" decoding="async">
+          <source srcset="https://assets.zeriahstudios.com/Zeriah%20Studios%20Vertical%20Tight.webp" type="image/webp">
+          <img src="https://assets.zeriahstudios.com/Zeriah%20Studios%20Vertical%20Tight.png" alt="Zeriah Studios" class="w-28 h-auto" loading="lazy" decoding="async">
         </picture>
         <div>
           <h3 class="font-semibold text-lg">Zeriah Studios</h3>
@@ -133,10 +124,9 @@
   <section class="border-y border-slate-200 bg-slate-50">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12">
       <div class="rounded-2xl shadow w-full h-72 lg:h-96 bg-white grid place-items-center">
-        <!-- Simple collage stand-in: reuse the group logo big for now -->
         <picture>
-          <source id="featureLogoWebp" type="image/webp">
-          <img id="featureLogoPng" alt="Zeriah brands" class="w-2/3 h-auto" loading="lazy" decoding="async">
+          <source srcset="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.webp" type="image/webp">
+          <img src="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.png" alt="Zeriah brands" class="w-2/3 h-auto" loading="lazy" decoding="async">
         </picture>
       </div>
       <div>
@@ -158,8 +148,8 @@
       <div>
         <div class="flex items-center gap-3">
           <picture>
-            <source id="footerLogoWebp" type="image/webp">
-            <img id="footerLogoPng" class="h-7 w-auto" alt="Zeriah Group">
+            <source srcset="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.webp" type="image/webp">
+            <img src="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.png" class="h-7 w-auto" alt="Zeriah Group">
           </picture>
           <span class="font-semibold">Zeriah Group</span>
         </div>
@@ -198,33 +188,6 @@
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Wire up R2 asset URLs (WEBP + PNG fallbacks)
-    const g = window.R2_BASE_GROUP, l = window.R2_BASE_LABS, s = window.R2_BASE_STUDIOS;
-
-    // Group logos
-    const groupWebp = g + "/Zeriah Group Corporate Logo Extra Bold Navy Horizontal.webp";
-    const groupPng  = g + "/Zeriah Group Corporate Logo Extra Bold Navy Horizontal.png";
-    document.getElementById('navLogoWebp').srcset   = groupWebp;
-    document.getElementById('navLogoPng').src       = groupPng;
-    document.getElementById('heroLogoWebp').srcset  = groupWebp;
-    document.getElementById('heroLogoPng').src      = groupPng;
-    document.getElementById('featureLogoWebp').srcset = groupWebp;
-    document.getElementById('featureLogoPng').src     = groupPng;
-    document.getElementById('footerLogoWebp').srcset  = groupWebp;
-    document.getElementById('footerLogoPng').src      = groupPng;
-
-    // Labs logos
-    const labsWebp = l + "/Zeriah_Labs_Vertical_Final.webp";
-    const labsPng  = l + "/Zeriah_Labs_Vertical_Final.png";
-    document.getElementById('labsLogoWebp').srcset = labsWebp;
-    document.getElementById('labsLogoPng').src     = labsPng;
-
-    // Studios logos
-    const studiosWebp = s + "/Zeriah Studios Vertical Tight.webp";
-    const studiosPng  = s + "/Zeriah Studios Vertical Tight.png";
-    document.getElementById('studiosLogoWebp').srcset = studiosWebp;
-    document.getElementById('studiosLogoPng').src     = studiosPng;
   </script>
 </body>
 </html>
