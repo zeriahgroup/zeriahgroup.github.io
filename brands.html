@@ -3,96 +3,125 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zeriah Group — Page Title</title>
-  <meta name="description" content="Zeriah Group builds learning and entertainment products across Labs and Studios." />
+  <title>Brands — Zeriah Group</title>
+  <meta name="description" content="Explore Zeriah Labs (learning) and Zeriah Studios (entertainment) — the brands of Zeriah Group." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}</style>
+  <style>html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}.ring-card{transition:box-shadow .2s, transform .2s}.ring-card:hover{box-shadow:0 8px 30px rgba(15,23,42,.08); transform:translateY(-1px)}</style>
 </head>
 <body class="bg-white text-slate-900">
-  <!-- HEADER -->
+  <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="/assets/zeriah-mark.png" alt="Zeriah" class="h-8 w-8"/>
-        <span class="font-semibold tracking-tight">Zeriah Group</span>
+      <a href="/" class="flex items-center gap-3">
+        <picture>
+          <source srcset="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.webp" type="image/webp">
+          <img src="https://assets.zeriahgroup.com/Zeriah%20Group%20Corporate%20Logo%20Extra%20Bold%20Navy%20Horizontal.png" alt="Zeriah Group" class="h-8 w-auto">
+        </picture>
       </a>
-
-      <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-8 text-sm">
-        <a class="hover:text-slate-700" href="about.html">About</a>
-        <a class="hover:text-slate-700" href="brands.html">Brands</a>
-        <a class="hover:text-slate-700" href="newsroom.html">Newsroom</a>
-        <a class="hover:text-slate-700" href="careers.html">Careers</a>
-        <a class="hover:text-slate-700" href="contact.html">Contact</a>
+        <a class="hover:text-slate-700" href="/about.html">About</a>
+        <a class="font-semibold" href="/brands.html">Brands</a>
+        <a class="hover:text-slate-700" href="/newsroom.html">Newsroom</a>
+        <a class="hover:text-slate-700" href="/careers.html">Careers</a>
+        <a class="hover:text-slate-700" href="/contact.html">Contact</a>
       </nav>
-
-      <!-- Mobile menu button -->
       <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-slate-300">
-        <span class="sr-only">Open menu</span>
         <svg viewBox="0 0 24 24" class="h-5 w-5"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </div>
-
-    <!-- Mobile drawer -->
     <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
-      <nav class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-3 text-sm">
-        <a class="py-2" href="about.html">About</a>
-        <a class="py-2" href="brands.html">Brands</a>
-        <a class="py-2" href="newsroom.html">Newsroom</a>
-        <a class="py-2" href="careers.html">Careers</a>
-        <a class="py-2" href="contact.html">Contact</a>
+      <nav class="mx-auto max-w-7xl px-4 py-3 grid gap-3 text-sm">
+        <a class="py-2" href="/about.html">About</a>
+        <a class="py-2 font-semibold" href="/brands.html">Brands</a>
+        <a class="py-2" href="/newsroom.html">Newsroom</a>
+        <a class="py-2" href="/careers.html">Careers</a>
+        <a class="py-2" href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-    <h1 class="text-3xl font-bold tracking-tight">Page Title</h1>
-    <p class="mt-4 text-slate-600">Page content goes here.</p>
-  </main>
+  <!-- Hero -->
+  <section class="bg-slate-50 border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight">Our Brands</h1>
+      <p class="mt-4 text-slate-600 max-w-2xl">Zeriah Group is home to two pillars: <span class="font-semibold">Zeriah Labs</span> (learning) and <span class="font-semibold">Zeriah Studios</span> (entertainment).</p>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
-  <footer class="py-12 border-t border-slate-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-8 md:grid-cols-4">
-      <div>
-        <div class="flex items-center gap-3">
-          <img src="/assets/zeriah-mark.png" class="h-7 w-7" alt="">
-          <span class="font-semibold">Zeriah Group</span>
+  <!-- Cards -->
+  <section class="py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-6 md:grid-cols-2">
+      <!-- Labs -->
+      <div id="labs" class="ring-card rounded-2xl border border-slate-200 p-6 flex gap-6">
+        <picture class="shrink-0 w-24 sm:w-28">
+          <source srcset="https://assets.zeriahlabs.com/Zeriah_Labs_Vertical_Final.webp" type="image/webp">
+          <img src="https://assets.zeriahlabs.com/Zeriah_Labs_Vertical_Final.png" alt="Zeriah Labs" class="w-full h-auto">
+        </picture>
+        <div>
+          <h2 class="text-xl font-semibold">Zeriah Labs</h2>
+          <p class="mt-2 text-slate-600">Learning apps and tools designed with care, privacy, and imagination for preschool & primary years.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Privacy-first, COPPA-friendly approach</li>
+            <li>• Simple, high-contrast UI for young learners</li>
+            <li>• Curriculum-aligned content, cloud-delivered assets</li>
+          </ul>
+          <div class="mt-5">
+            <a href="/newsroom.html" class="text-slate-900 underline-offset-2 hover:underline">See updates →</a>
+          </div>
         </div>
-        <p class="mt-3 text-sm text-slate-600">© <span id="year"></span> Zeriah Group. All rights reserved.</p>
       </div>
+
+      <!-- Studios -->
+      <div id="studios" class="ring-card rounded-2xl border border-slate-200 p-6 flex gap-6">
+        <picture class="shrink-0 w-24 sm:w-28">
+          <source srcset="https://assets.zeriahstudios.com/Zeriah%20Studios%20Vertical%20Tight.webp" type="image/webp">
+          <img src="https://assets.zeriahstudios.com/Zeriah%20Studios%20Vertical%20Tight.png" alt="Zeriah Studios" class="w-full h-auto">
+        </picture>
+        <div>
+          <h2 class="text-xl font-semibold">Zeriah Studios</h2>
+          <p class="mt-2 text-slate-600">Family-friendly games that bring people together — easy to pick up, joyful to play, and built with accessibility in mind.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Lighthearted, social-first gameplay</li>
+            <li>• Controller & touch-friendly input</li>
+            <li>• Responsible ads / purchase controls where applicable</li>
+          </ul>
+          <div class="mt-5">
+            <a href="/newsroom.html" class="text-slate-900 underline-offset-2 hover:underline">See updates →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="border-y border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 flex flex-wrap items-center justify-between gap-6">
       <div>
-        <h4 class="font-semibold mb-3">Company</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:underline" href="about.html">About</a></li>
-          <li><a class="hover:underline" href="brands.html">Brands</a></li>
-          <li><a class="hover:underline" href="careers.html">Careers</a></li>
-        </ul>
+        <h2 class="text-2xl font-bold">Want to partner or feature our work?</h2>
+        <p class="mt-2 text-slate-600">Media & partnership enquiries are welcome.</p>
       </div>
-      <div>
-        <h4 class="font-semibold mb-3">Resources</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:underline" href="newsroom.html">Newsroom</a></li>
-          <li><a class="hover:underline" href="privacy.html">Privacy</a></li>
-          <li><a class="hover:underline" href="terms.html">Terms</a></li>
-        </ul>
+      <div class="flex gap-3">
+        <a href="/contact.html" class="px-5 py-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800">Contact us</a>
+        <a href="/newsroom.html" class="px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Newsroom</a>
       </div>
-      <div>
-        <h4 class="font-semibold mb-3">Contact</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:underline" href="contact.html">General enquiries</a></li>
-          <li><a class="hover:underline" href="mailto:press@zeriahgroup.com">press@zeriahgroup.com</a></li>
-        </ul>
-      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-8 md:grid-cols-4">
+      <div><span class="font-semibold text-lg tracking-tight">Zeriah Group</span><p class="mt-3 text-sm text-slate-600">© <span id="year"></span> Zeriah Group. All rights reserved.</p></div>
+      <div><h4 class="font-semibold mb-3">Company</h4><ul class="space-y-2 text-sm"><li><a class="hover:underline" href="/about.html">About</a></li><li><a class="hover:underline" href="/brands.html">Brands</a></li><li><a class="hover:underline" href="/careers.html">Careers</a></li></ul></div>
+      <div><h4 class="font-semibold mb-3">Resources</h4><ul class="space-y-2 text-sm"><li><a class="hover:underline" href="/newsroom.html">Newsroom</a></li><li><a class="hover:underline" href="/policies/privacy.html">Privacy</a></li><li><a class="hover:underline" href="/policies/terms.html">Terms</a></li></ul></div>
+      <div><h4 class="font-semibold mb-3">Contact</h4><ul class="space-y-2 text-sm"><li><a class="hover:underline" href="/contact.html">General enquiries</a></li><li><a class="hover:underline" href="mailto:press@zeriahgroup.com">press@zeriahgroup.com</a></li></ul></div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('menuBtn').onclick = () =>
-      document.getElementById('mobileNav').classList.toggle('hidden');
+    document.getElementById('menuBtn').onclick = () => document.getElementById('mobileNav').classList.toggle('hidden');
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
