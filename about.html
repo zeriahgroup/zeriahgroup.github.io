@@ -8,36 +8,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
+    :root{
+      --ink:#111827; --text:#1f2937; --muted:#6b7280; --bg:#f9fafb; --link:#00d0ff;
+      --max: 800px;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 3rem 1rem;
-    }
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #111827;
-    }
-    p {
-      margin-bottom: 1.25rem;
-      font-size: 1.125rem;
-    }
+    body{font-family:'Montserrat',sans-serif;margin:0;background:var(--bg);color:var(--text);line-height:1.7}
+    .wrap{max-width:var(--max);margin:0 auto;padding:2rem 1rem}
+    header{border-bottom:1px solid #e5e7eb}
+    .container{max-width:var(--max);margin:0 auto;padding:2rem 1rem}
+    h1{font-size:2.25rem;font-weight:700;margin:0 0 1rem;color:var(--ink)}
+    p{margin:1rem 0;font-size:1.125rem}
+    .back-link{color:var(--link);text-decoration:none;font-weight:700}
+    .back-link:hover{text-decoration:underline}
+    footer{margin:2.5rem 0;text-align:center;color:var(--muted);font-size:.9rem}
   </style>
 </head>
 <body>
   <header class="wrap">
-  <a href="index.html" style="color:#00d0ff;text-decoration:none;font-weight:700">← Back to Zeriah Group</a>
-</header>
-  <div class="container">
+    <a href="index.html" class="back-link">← Back to Zeriah Group</a>
+  </header>
+
+  <main class="container">
     <h1>Zeriah Group</h1>
     <p>
       The name <strong>Zeriah</strong> means “seeds” or “God has risen” — a reminder of growth, hope, and new beginnings.
@@ -56,6 +47,11 @@
       The goal is simple: to create a home where ideas are cared for, people are valued,
       and ventures can evolve naturally into something greater than the sum of their parts.
     </p>
-  </div>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Zeriah Group · All rights reserved
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
