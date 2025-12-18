@@ -14,6 +14,17 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <script>
+  tailwind.config = {
+    theme: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+</script>
+
+
   <style>
     html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
 
@@ -324,8 +335,14 @@
 
   if (btn && nav) {
     btn.onclick = () => nav.classList.toggle('hidden');
+
+    // Close menu after tapping a link
+    nav.querySelectorAll('a').forEach(link => {
+      link.onclick = () => nav.classList.add('hidden');
+    });
   }
 </script>
+
 
 
 </body>
