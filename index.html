@@ -334,7 +334,10 @@
   const nav = document.getElementById('mobileNav');
 
   if (btn && nav) {
-    btn.onclick = () => nav.classList.toggle('hidden');
+    btn.onclick = () => {
+  const open = nav.classList.toggle('hidden');
+  btn.setAttribute('aria-expanded', !open);
+};
 
     // Close menu after tapping a link
     nav.querySelectorAll('a').forEach(link => {
