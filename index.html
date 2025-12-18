@@ -10,10 +10,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
-    .ring-card{transition:box-shadow .2s, transform .2s}
-    .ring-card:hover{box-shadow:0 8px 30px rgba(15,23,42,.08); transform:translateY(-1px)}
-  </style>
+  html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+
+  /* Existing */
+  .ring-card{transition:box-shadow .2s, transform .2s}
+  .ring-card:hover{box-shadow:0 8px 30px rgba(15,23,42,.08); transform:translateY(-1px)}
+
+  /* NEW: Press-down + focus ring (applies to buttons + cards) */
+  a, button{
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+
+  /* Press-down on click */
+  .press:active{
+    transform: translateY(1px) scale(0.992);
+  }
+  .ring-card.press:active{
+    transform: translateY(0px) scale(0.996);
+  }
+
+  /* Keyboard focus */
+  .focus-ring:focus-visible{
+    box-shadow: 0 0 0 3px rgba(0, 208, 255, .25);
+    border-color: rgba(0, 208, 255, .35) !important;
+  }
+
+  /* Tasteful shimmer (only on hover, very subtle) */
+  .shimmer{position:relative; overflow:hidden}
+  .shimmer::after{
+    content:"";
+    position:absolute;
+    inset:-40%;
+    transform: translateX(-60%) rotate(12deg);
+    opacity:0;
+    pointer-events:none;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255,255,255,.06) 35%,
+      rgba(255,255,255,.14) 50%,
+      rgba(255,255,255,.06) 65%,
+      transparent 100%
+    );
+    filter: blur(1px);
+    transition: opacity .18s ease;
+  }
+  .shimmer:hover::after{
+    opacity:1;
+    animation: shimmer-sweep 1.05s ease-in-out;
+  }
+  @keyframes shimmer-sweep{
+    0%{transform: translateX(-60%) rotate(12deg);}
+    100%{transform: translateX(60%) rotate(12deg);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .shimmer:hover::after{animation:none}
+  }
+</style>
+
 </head>
 <body class="bg-white text-slate-900">
   <!-- Top bar -->
@@ -70,7 +125,7 @@
           <span class="font-semibold">Zeriah Studios</span> (entertainment), grounded in care, privacy, and family-friendly fun.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="/brands.html" class="px-5 py-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800">Explore Brands</a>
+          <a href="/brands.html" class="press focus-ring px-5 py-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800">
           <a href="/newsroom.html" class="px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Newsroom</a>
         </div>
       </div>
@@ -96,22 +151,22 @@
   <!-- Audience tiles -->
   <section>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-      <a href="/about.html" class="group rounded-2xl border border-slate-200 p-6 hover:shadow-sm">
+      <a href="/about.html" class="press focus-ring shimmer group rounded-2xl border border-slate-200 p-6 hover:shadow-sm">
         <h3 class="font-semibold text-lg">About Zeriah</h3>
         <p class="mt-2 text-sm text-slate-600">Mission, leadership, and our story.</p>
         <div class="mt-4 text-sm text-slate-900 group-hover:underline">Learn more →</div>
       </a>
-      <a href="/brands.html" class="group rounded-2xl border border-slate-200 p-6 hover:shadow-sm">
+      <a href="/brands.html" class="press focus-ring shimmer group rounded-2xl border border-slate-200 p-6 hover:shadow-sm">
         <h3 class="font-semibold text-lg">Our Brands</h3>
         <p class="mt-2 text-sm text-slate-600">Zeriah Labs & Zeriah Studios.</p>
         <div class="mt-4 text-sm text-slate-900 group-hover:underline">Explore →</div>
       </a>
-      <a href="/newsroom.html" class="group rounded-2xl border border-slate-200 p-6 hover:shadow-sm">
+      <a href="/newsroom.html" class="press focus-ring shimmer group rounded-2xl border border-slate-200 p-6 hover:shadow-sm">
         <h3 class="font-semibold text-lg">Newsroom</h3>
         <p class="mt-2 text-sm text-slate-600">Press releases & media kit.</p>
         <div class="mt-4 text-sm text-slate-900 group-hover:underline">Read updates →</div>
       </a>
-      <a href="/careers.html" class="group rounded-2xl border border-slate-200 p-6 hover:shadow-sm">
+      <a href="/careers.html" class="press focus-ring shimmer group rounded-2xl border border-slate-200 p-6 hover:shadow-sm">
         <h3 class="font-semibold text-lg">Careers</h3>
         <p class="mt-2 text-sm text-slate-600">Join us (or register interest).</p>
         <div class="mt-4 text-sm text-slate-900 group-hover:underline">See roles →</div>
