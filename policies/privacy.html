@@ -4,16 +4,93 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Zeriah Group</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Privacy Policy for Zeriah Group.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>html{font-family:Inter,system-ui,sans-serif}</style>
+
+  <style>
+    html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    a,button{-webkit-tap-highlight-color:transparent}
+    .press{transform-origin:center;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+    .press:active{transform:translateY(1px) scale(0.992)}
+    .focus-ring:focus-visible{
+      outline:none;
+      box-shadow:0 0 0 3px rgba(0,208,255,.25);
+      border-color:rgba(0,208,255,.35)!important;
+    }
+  </style>
 </head>
-<body class="bg-white text-slate-900">
-  <main class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
-    <h1 class="text-3xl font-extrabold">Privacy Policy</h1>
-    <p class="mt-6 text-slate-700">At Zeriah Group, your privacy is important to us. This site collects no personal data beyond what is necessary for analytics and basic functionality. If you contact us by email, your information is used solely to respond to your enquiry.</p>
-    <p class="mt-4 text-slate-700">We do not sell or share your personal information with third parties. Our apps and services may have their own policies, which will be clearly provided in-app or on their respective sites.</p>
-    <p class="mt-4 text-slate-700">For questions, please contact <a href="mailto:hello@zeriahgroup.com" class="underline">hello@zeriahgroup.com</a>.</p>
+
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- Header (hub style) -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex h-16 items-center justify-between gap-4">
+        <a href="/index.html" class="flex items-center gap-3 font-extrabold tracking-tight">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white">ZG</span>
+          <span>Zeriah Group</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-2 text-sm">
+          <a href="/brands.html" class="press focus-ring rounded-xl border border-slate-200 px-3 py-2 text-slate-700 hover:bg-slate-50">Brands</a>
+          <a href="/newsroom.html" class="press focus-ring rounded-xl border border-slate-200 px-3 py-2 text-slate-700 hover:bg-slate-50">Newsroom</a>
+          <a href="/about.html" class="press focus-ring rounded-xl border border-slate-200 px-3 py-2 text-slate-700 hover:bg-slate-50">About</a>
+          <a href="/careers.html" class="press focus-ring rounded-xl border border-slate-200 px-3 py-2 text-slate-700 hover:bg-slate-50">Careers</a>
+          <a href="/contact.html" class="press focus-ring rounded-xl border border-slate-200 px-3 py-2 text-slate-700 hover:bg-slate-50">Contact</a>
+          <a href="/travels/" class="press focus-ring rounded-xl border border-slate-200 px-3 py-2 text-slate-700 hover:bg-slate-50">Travels</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page -->
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <div class="rounded-3xl border border-slate-200 bg-white p-8">
+      <div class="text-sm text-slate-500">Policies</div>
+      <h1 class="mt-2 text-3xl font-extrabold tracking-tight">Privacy Policy</h1>
+
+      <div class="prose prose-slate max-w-none mt-6">
+        <p class="text-slate-700">
+          At Zeriah Group, your privacy is important to us. This site collects no personal data beyond what is necessary for analytics and basic functionality.
+          If you contact us by email, your information is used solely to respond to your enquiry.
+        </p>
+        <p class="mt-4 text-slate-700">
+          We do not sell or share your personal information with third parties. Our apps and services may have their own policies,
+          which will be clearly provided in-app or on their respective sites.
+        </p>
+        <p class="mt-4 text-slate-700">
+          For questions, please contact
+          <a href="mailto:hello@zeriahgroup.com" class="font-bold text-slate-900 underline">hello@zeriahgroup.com</a>.
+        </p>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/policies/terms.html" class="press focus-ring rounded-xl border border-slate-200 bg-white px-4 py-2 font-extrabold text-slate-800 hover:bg-slate-50">Terms</a>
+        <a href="/index.html" class="press focus-ring rounded-xl bg-slate-900 px-4 py-2 font-extrabold text-white hover:bg-slate-800">Back to home</a>
+      </div>
+    </div>
   </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="text-sm text-slate-600">© <span id="year"></span> Zeriah Group</div>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <a class="press focus-ring rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50" href="/about.html">About</a>
+          <a class="press focus-ring rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50" href="/brands.html">Brands</a>
+          <a class="press focus-ring rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50" href="/newsroom.html">Newsroom</a>
+          <a class="press focus-ring rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50" href="/contact.html">Contact</a>
+          <a class="press focus-ring rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50" href="/policies/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
