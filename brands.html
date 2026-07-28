@@ -257,11 +257,9 @@
   </footer>
 
   <script>
-  // Footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').onclick = () =>
+      document.getElementById('mobileNav').classList.toggle('hidden');
 
-  <script>
-    document.getElementById('menuBtn').onclick = () => document.getElementById('mobileNav').classList.toggle('hidden');
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
